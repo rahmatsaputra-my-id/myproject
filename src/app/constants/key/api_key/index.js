@@ -1,0 +1,9 @@
+export const API_KEY = {
+  news: '5a167798e53f44fc8e141fec905a21c1',
+  news2: 'c654fc8193894045b959c89585ba6c82',
+  news3: 'bf9b75097b334a349e8c5360103ef6dd',
+  news4: 'a91730f47d124f1e9a797804a738ba49',
+  news5: '2d66d45074ed4c11ad0c8727a886e51e',
+  news6: '6e168b9251d94439806bbcbd22a6fee3',
+  news7: '446b8befb1204778878ce6476631773b',
+}
