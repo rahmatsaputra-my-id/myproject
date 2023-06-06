@@ -1,3 +1,4 @@
 export const DEFAULT_STATE = {
-  widthListener: false
+  widthListener: false,
+  selectedContactData: false
 } 

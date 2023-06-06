@@ -8,10 +8,10 @@ import { Provider } from 'react-redux';
 import { Toast } from 'react-native-toast-message/lib/src/Toast';
 import { STATUSBAR_HEIGHT } from '../../constants/functional';
 import { Colors as ColorsBar } from 'react-native/Libraries/NewAppScreen';
-import { SafeAreaView, StatusBar, StyleSheet, useColorScheme } from 'react-native';
+import { SafeAreaView, StatusBar, StyleSheet, Text, View, useColorScheme } from 'react-native';
+import { ContactDetailScreen } from '../../components/screens/ContactDetailScreen';
 
 const Stack = createStackNavigator();
-
 const Navigator = () => {
   return (
     <Stack.Navigator
@@ -19,7 +19,6 @@ const Navigator = () => {
       screenOptions={{
         headerShown: false,
       }}>
-
       <Stack.Screen
         name="LoginScreen"
         component={LoginScreen}
@@ -30,6 +29,10 @@ const Navigator = () => {
         component={ContactScreen}
       />
 
+      <Stack.Screen
+        name="ContactDetailScreen"
+        component={ContactDetailScreen}
+      />
     </Stack.Navigator>
   )
 }
@@ -39,8 +42,8 @@ const ToastContainer = props => {
     <>
       {props?.isVisible ? (
         <View style={stylesProps(props?.type).toastContainer} >
-          <Text style={styles(props.type).toastTitle}>
-            {props.label}
+          <Text style={stylesProps(props?.type).toastTitle}>
+            {props?.text1}
           </Text>
         </View >
       ) : null}
@@ -54,7 +57,6 @@ export const Route = () => {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? ColorsBar.darker : ColorsBar.lighter,
   };
-
   const toastConfig = {
     success: (props) => <ToastContainer {...props} />,
     error: (props) => <ToastContainer {...props} type="error" />,
@@ -62,7 +64,7 @@ export const Route = () => {
   };
 
   return (
-    <SafeAreaView style={styles.styleProps}>
+    <SafeAreaView style={styles.safeAreaView}>
       <StatusBar
         translucent
         barStyle={barStyle}
@@ -75,7 +77,7 @@ export const Route = () => {
           <Toast
             config={toastConfig}
             position={'bottom'}
-            visibilityTime={3000}
+            visibilityTime={2500}
           />
         </NavigationContainer>
       </Provider>

@@ -1,14 +1,18 @@
 import axios from 'axios';
-import { STORAGE_KEY } from '../../constants/key/storage_key';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { STORAGE_KEY } from '../../constants/key/storage_key';
 import { BASE_URL } from '../../constants/url/base_url';
 
 const baseConfig = {
+  // baseURL: BASE_URL.RAHMAT_SAPUTRA,
+  // headers: {
+  //   'Content-Type': 'application/json',
+  //   'access-control-allow-origin': '*',
+  // },
   baseURL: BASE_URL.CONTACT,
   headers: {
-    'Content-Type': 'application/json',
-    'access-control-allow-origin': '*',
-    'Accept-Language': 'id',
+    'Accept': 'application/json',
+    'content-type': 'application/json',
   },
   timeout: 10000,
 };

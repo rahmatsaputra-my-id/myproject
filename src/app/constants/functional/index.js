@@ -11,6 +11,14 @@ export const useMergeState = (initialState) => {
   return [state, setMergedState];
 };
 
+export const hostEndsWith = (host, ends = formatImage) => {
+  let value = false;
+  value = ends.some(element => {
+    return host.endsWith(element);
+  });
+  return value ? { uri: host } : IMAGES.imgPlaceHolder;
+};
+
 export const GenerateUUID = () => {
   const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(
     /[xy]/g,
