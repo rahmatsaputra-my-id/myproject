@@ -4,6 +4,9 @@ const Colors = {
   white: '#FFFFFF',
   yellow: '#FFD839',
   black: '#1D252D',
+  success: '#019859',
+  error: '#D92037',
+  warning: '#FF9E16'
 };
 
 export default Colors;

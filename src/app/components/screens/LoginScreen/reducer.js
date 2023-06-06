@@ -1,5 +1,5 @@
-import { DEFAULT_STATE } from '../../configuration/reducer/state';
-import { REDUCER_KEY } from '../../constants/key/reducer_key';
+import { DEFAULT_STATE } from '../../../configuration/reducer/state';
+import { REDUCER_KEY } from '../../../constants/key/reducer_key';
 
 export const loginReducer = (state = DEFAULT_STATE, action) => {
   switch (action.type) {

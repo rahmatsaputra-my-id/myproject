@@ -1,5 +1,5 @@
 
-import { loginReducer } from '../../screens/LoginScreen/reducer';
+import { loginReducer } from '../../components/screens/LoginScreen/reducer';
 import { DEFAULT_STATE } from './state';
 
 const appReducer = (state = DEFAULT_STATE, action) => {
