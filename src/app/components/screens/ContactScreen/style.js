@@ -5,7 +5,7 @@ import Colors from '../../../constants/colors';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingVertical: 16,
+    paddingTop: 16,
     justifyContent: 'space-between',
     backgroundColor: Colors.white
   },

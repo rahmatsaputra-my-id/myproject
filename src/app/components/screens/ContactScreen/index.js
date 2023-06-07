@@ -93,7 +93,10 @@ const ContactScreen = ({ }) => {
                   _handlerEditContact(item)
                 }} style={styles.card}>
                   <View style={styles.content}>
-                    <Image source={{ uri: photo }} style={styles.cardIconAvatar} />
+                    {photo ? (
+                      <Image source={{ uri: photo }} style={styles.cardIconAvatar} />
+                    ) : null}
+
                     <Text style={styles.cardTitle}>{firstName}</Text>
                   </View>
 

@@ -79,7 +79,7 @@ const styleProps = (
       flexDirection: 'row',
       borderRadius: 30,
       backgroundColor: isDisabled
-        ? Colors.black
+        ? Colors.grey
         : outline
           ? Colors.white
           : background,
@@ -101,11 +101,13 @@ const styleProps = (
       fontSize: fontSize,
       fontWeight: '600',
       fontFamily: 'Poppins-SemiBold',
-      color: isDisabled || outline
-        ? Colors.black
-        : color
-          ? color
-          : Colors.black,
+      color: isDisabled
+        ? Colors.white
+        : outline
+          ? Colors.black
+          : color
+            ? color
+            : Colors.black,
     },
   });
 

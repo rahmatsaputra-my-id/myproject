@@ -66,12 +66,4 @@ export const styles = StyleSheet.create({
   gap: {
     height: 16
   },
-  textInputBorder: {
-    borderColor: Colors.grey,
-    borderWidth: 2,
-    borderRadius: 10,
-    paddingVertical: 4,
-    paddingHorizontal: 10,
-    color: Colors.black
-  }
 });
